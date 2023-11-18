@@ -396,7 +396,7 @@ uint8_t I2C_eeprom::setPageSize(uint8_t pageSize)
 {
   uint8_t size = 8;
   //  force power of 2.
-  while ((size <= 128) && ( size <= pageSize))
+  while ((size <= 128) && ( size < pageSize))
   {
     _pageSize = size;
     size *= 2;
